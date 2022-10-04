@@ -21,28 +21,30 @@ ANIMAL_ID, ANIMAL_TYPE, DATETIME, INTAKE_CONDITION, NAME, SEX_UPON_INTAKE는
 ---
 
 ### **문제 설명**
-동물 보호소에 들어온 동물 중 아픈 동물1의 아이디와 이름을 조회하는 SQL 문을 작성해주세요.  
-이때 결과는 아이디 순으로 조회해주세요.  
+동물 보호소에 들어온 동물 중, 이름이 있는 동물의 ID를 조회하는 SQL 문을 작성해주세요.  
+단, ID는 오름차순 정렬되어야 합니다.  
 
 ---
 
 ### **예시**
-예를 들어 ANIMAL_INS 테이블이 다음과 같다면  
+예를 들어 ANIMAL_INS 테이블이 다음과 같다면
 
 
 |ANIMAL_ID|ANIMAL_TYPE|DATETIME|INTAKE_CONDITION|NAME|SEX_UPON_INTAKE|
-|------|------|------|------|------|------|
-|A365172|Dog|2014-08-26|12:53:00|Normal|Diablo|Neutered|Male|
-|A367012|Dog|2015-09-16|09:06:00|Sick|Miller|Neutered|Male|
-|A365302|Dog|2017-01-08|16:34:00|Aged|Minnie|Spayed|Female|
-|A381217|Dog|2017-07-08|09:41:00|Sick|Cherokee|Neutered|Male|
+|------|------|------|------|------|
+|A434523|Cat|2015-11-20|14:18:00|Normal|NULL|Spayed|Female|
+|A562649|Dog|2014-03-20|18:06:00|Sick|NULL|Spayed|Female|
+|A524634|Dog|2015-01-02|18:54:00|Normal|*Belle|Intact|Female|
+|A465637|Dog|2017-06-04|08:17:00|Injured|*Commander|Neutered|Male|
 
-이 중 아픈 동물은 Miller와 Cherokee입니다.  
-따라서 SQL문을 실행하면 다음과 같이 나와야 합니다.  
 
-|ANIMAL_ID|NAME|
-|------|------|
-|A367012|Miller|
-|A381217|Cherokee|
+이름이 있는 동물의 ID는 A524634와 A465637입니다.  
+따라서 SQL을 실행하면 다음과 같이 출력되어야 합니다.  
+
+
+|ANIMAL_ID|
+|------|
+|A465637|
+|A524634|
 
 
